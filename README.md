@@ -9,8 +9,8 @@ supports both article and image-based retrieval, with evaluation based on RAGAS 
 
 - [🚀 Features](#-features)
 - [📁 Project Structure](#-project-structure)
-- [⚙️ How It Works](#-how-it-works)
-- [🛠️ Installation](#-installation)
+- [⚙️ How It Works](#-How-It-Works)
+- [🛠️ Installation](#-Installation)
 - [🔑 OpenAI API Key Setup](#-setup-OpenAI-Key)
 - [🧪 Running the Components](#-running-the-components)
 - [🧠 RAGAS Evaluation](#-ragas-evaluation)
@@ -73,7 +73,7 @@ project/
 - `pip` for package management
 - OpenAI API key (stored in `.env` and `secrets.toml`)
 
-## ⚙️ Installation
+## 🛠 Installation
 
 ```bash
 # Clone the repository
