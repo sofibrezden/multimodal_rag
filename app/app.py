@@ -10,8 +10,8 @@ from scripts.utils import load_faiss_index, load_json, load_model
 from scripts.search_articles import query_index, select_top_articles_and_images, rerank_results
 
 # configs
-INDEX_PATH = "../output/textonly_blip.index"
-META_PATH = "../output/textonly_meta_blip.json"
+INDEX_PATH = "output/textonly_blip.index"
+META_PATH = "output/textonly_meta_blip.json"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 LLM_MODEL = "gpt-4o-mini"
 
