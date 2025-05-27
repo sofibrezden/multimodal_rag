@@ -78,7 +78,7 @@ project/
 ```bash
 # Clone the repository
 git clone https://github.com/sofibrezden/multimodal_rag.git
-cd multimodal-rag
+cd multimodal_rag
 
 # Set up virtual environment
 python -m venv .venv
@@ -119,19 +119,25 @@ python scripts/scrap_articles.py
 #### 2. Build the FAISS Index
 
 ```bash
-python scripts/build_index.py \
-    --input output/the_batch_articles.jsonl \
-    --index_path output/textonly_blip.index \
-    --meta_path output/textonly_meta_blip.json
+cd scripts
+python build_index.py --input ../output/the_batch_articles.jsonl --index_path ../output/textonly_blip.index --meta_path ../output/textonly_meta_blip.json                       
 ```
 
-#### 3.📊 Evaluate the System
+#### 3. Search appropriate articles and photos
 
 ```bash
-python scripts/evaluation.py
+cd scripts
+python search_articles.py  --query "Your search query here"  --top_k 5 --pool_size 20  --index_path ../output/textonly_blip.index  --meta_path ../output/textonly_meta_blip.json
 ```
 
-#### 4. Start the Streamlit App
+#### 4.📊 Evaluate the System
+
+```bash
+cd scripts
+python evaluation.py --index_path ../output/textonly_blip.index --meta_path ../output/textonly_meta_blip.json --output_csv ../output/ragas_eval_results.csv
+```
+
+#### 5. Start the Streamlit App
 
 ```bash
 streamlit run app/app.py
