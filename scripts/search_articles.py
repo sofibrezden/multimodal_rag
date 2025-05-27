@@ -2,7 +2,11 @@ import argparse
 import numpy as np
 from sentence_transformers import util
 import faiss
-from scripts.utils import load_model, load_json
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from scripts.utils import load_model, load_jsonl
 
 
 def rerank_results(query, results, model, top_k=5):
